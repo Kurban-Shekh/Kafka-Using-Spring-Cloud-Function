@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: KProducer
+  cloud:
+    stream:
+      bindings:
+        orderLocation-out-0:
+          destination: my-topic
+          content-type: application/json
+      kafka:
+        binder:
+          brokers: localhost:9092

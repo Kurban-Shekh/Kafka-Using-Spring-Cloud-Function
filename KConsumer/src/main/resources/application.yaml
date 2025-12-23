@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: KConsumer
+  cloud:
+    stream:
+      function:
+        definition: processOrderRequest
+      bindings:
+        processOrderRequest-in-0:
+          destination: my-topic
+      kafka:
+        binder:
+          brokers: localhost:9092
+
+
+server:
+  port: 8081
